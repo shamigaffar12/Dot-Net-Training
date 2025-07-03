@@ -1,0 +1,7 @@
+C:\Infinite Trainining 2025\CSharp\Coding Challenge\Code Challenge 2\CodeChallenge2\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Infinite Trainining 2025\CSharp\Coding Challenge\Code Challenge 2\CodeChallenge2\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Infinite Trainining 2025\CSharp\Coding Challenge\Code Challenge 2\CodeChallenge2\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Infinite Trainining 2025\CSharp\Coding Challenge\Code Challenge 2\CodeChallenge2\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Infinite Trainining 2025\CSharp\Coding Challenge\Code Challenge 2\CodeChallenge2\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Infinite Trainining 2025\CSharp\Coding Challenge\Code Challenge 2\CodeChallenge2\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Infinite Trainining 2025\CSharp\Coding Challenge\Code Challenge 2\CodeChallenge2\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

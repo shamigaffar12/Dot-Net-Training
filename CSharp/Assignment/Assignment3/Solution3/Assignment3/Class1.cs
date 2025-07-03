@@ -113,7 +113,7 @@ Explain what each comparison is checking.
             Player p2 = new Player(50000);
             p1.Scores();
             p2.Scores();
-            Player.
+            
             //Console.WriteLine(p1.score.CompareTo(p2.score));
             //Console.Read();
 

@@ -42,7 +42,7 @@ namespace Assignment3
             Console.WriteLine("----Enter the marks of the students-----");
             for (int i = 0; i < marks.Length; i++)
             {
-                Console.Write("Enter the maeks of subject" + (i + 1) + " : ");
+                Console.Write("Enter the marks of subject" + (i + 1) + " : ");
                 marks[i] = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("  ");
 
@@ -64,7 +64,7 @@ namespace Assignment3
                 }
 
             }
-            if (result = true)
+            if (result == true)
             {
                 Console.WriteLine("Result : failed ");
             }
