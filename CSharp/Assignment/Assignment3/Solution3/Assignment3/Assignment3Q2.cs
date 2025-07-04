@@ -16,7 +16,7 @@ using System.Threading.Tasks;
 //-If avg > 50 then print result as passed.
 
 //-Write a DisplayData() method to display all object members values.
-namespace Assignment3
+namespace Assignment5
 {
     class Student
     {
