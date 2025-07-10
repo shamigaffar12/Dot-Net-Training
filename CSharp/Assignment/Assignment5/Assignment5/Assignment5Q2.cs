@@ -34,7 +34,9 @@ namespace Assignment5
             this.fees = fees;
 
             scholarshipamount = fees - (fees * marks) / 100;
-            Console.WriteLine("Scolarship Amount: ");
+           
+            
+
             return scholarshipamount;
 
         }
@@ -45,17 +47,19 @@ namespace Assignment5
 
             if (marks > 90)
             {
-                calculateScholarship(marks, fees);
+
+                Console.WriteLine("Scolarship Amount: " + calculateScholarship(marks, fees));
+
 
             }
             else if (marks > 80 && marks <= 90)
             {
-                calculateScholarship(marks, fees);
+                Console.WriteLine("Scolarship Amount: " + calculateScholarship(marks, fees));
 
             }
             else if (marks >= 70 && marks <= 80)
             {
-                calculateScholarship(marks, fees);
+                Console.WriteLine("Scolarship Amount: " + calculateScholarship(marks, fees));
             }
             else
             {

@@ -15,7 +15,7 @@ namespace Assignment5
 {
     class Account : Exception
     {
-        public int AccountNO;
+        public int  AccountNO;
         public string CustomerName;
         public string AccType;
 
@@ -24,7 +24,7 @@ namespace Assignment5
 
         public Account(int accNo, string custName, string accType)
         {
-            this.AccountNO = accNo;
+            this.AccountNO = checked (accNo);
             this.CustomerName = custName;
             this.AccType = accType;
 
@@ -69,7 +69,7 @@ namespace Assignment5
             }
             public void showData()
             {
-                Console.WriteLine("Account Number : " + AccountNO);
+                Console.WriteLine("Account Number : " + unchecked (AccountNO));
                 Console.WriteLine("Customer Name : " + CustomerName);
                 Console.WriteLine("Account Type=" + AccType);
                 Console.WriteLine("Available Balance : " + balance);

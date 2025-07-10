@@ -111,7 +111,7 @@ namespace Assignment4
         }
 
         //display employee by searching employee Id
-        internal List<Employee> GetEmployeeById()
+        internal List<Employee> GetEmployeeById(Employee emp)
         {
 
 
@@ -119,12 +119,13 @@ namespace Assignment4
             int ID = Convert.ToInt32(Console.ReadLine());
 
 
-            foreach (var emp in empList)
+            foreach (var item in empList)
             {
-                if (emp.Id == ID)
+                if (item.Id == ID)
                 {
 
-                    DisplayEmployee();
+                    return empList;
+
 
                 }
 
@@ -132,7 +133,6 @@ namespace Assignment4
             }
 
 
-            return empList;
 
         }
 
@@ -142,27 +142,27 @@ namespace Assignment4
         {
             Console.WriteLine("Enter Employee Id to search");
             int ID = Convert.ToInt32(Console.ReadLine());
-            List<Employee> employee = new List<Employee>();
-            employee = empList;
+            IEnumerable<Employee> p= emp.empList;
+            var item=p.Count();
 
 
-            foreach (var item in empList)
+            for (var i=0; i<item; i++)
             {
-                if (item.Id == ID)
+                if (Id == ID)
                 {
                     Console.WriteLine("Enter the updated Name :");
-                    item.Name = Convert.ToString(Console.ReadLine());
+                    emp.Name = Convert.ToString(Console.ReadLine());
                     Console.WriteLine("Enter the updated Department :");
-                    item.Department = Convert.ToString(Console.ReadLine());
+                    emp.Department = Convert.ToString(Console.ReadLine());
                     Console.WriteLine("Enter the updated salary :");
-                    item.Salary = Convert.ToDouble(Console.ReadLine());
+                    emp.Salary = Convert.ToDouble(Console.ReadLine());
 
-
+                  
                 }
-
-
-
                 empList.Add(emp);
+
+
+
             }
 
             Console.WriteLine("Updated details of employee");
@@ -236,7 +236,7 @@ namespace Assignment4
                         break;
 
                     case 3:
-                        employee.GetEmployeeById();
+                        employee.GetEmployeeById(employee);
                         break;
                     case 4:
                         employee.UpdateEmployee(employee);

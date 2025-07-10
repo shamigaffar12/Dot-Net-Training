@@ -1,0 +1,7 @@
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\Asiignment 7\bin\Debug\Asiignment 7.exe.config
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\Asiignment 7\bin\Debug\Asiignment 7.exe
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\Asiignment 7\bin\Debug\Asiignment 7.pdb
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\Asiignment 7\obj\Debug\Asiignment 7.csproj.AssemblyReference.cache
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\Asiignment 7\obj\Debug\Asiignment 7.csproj.CoreCompileInputs.cache
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\Asiignment 7\obj\Debug\Asiignment 7.exe
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\Asiignment 7\obj\Debug\Asiignment 7.pdb

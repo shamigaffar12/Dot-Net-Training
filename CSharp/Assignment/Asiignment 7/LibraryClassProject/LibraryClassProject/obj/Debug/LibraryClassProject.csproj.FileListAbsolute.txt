@@ -1,0 +1,6 @@
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\LibraryClassProject\LibraryClassProject\bin\Debug\LibraryClassProject.dll
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\LibraryClassProject\LibraryClassProject\bin\Debug\LibraryClassProject.pdb
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\LibraryClassProject\LibraryClassProject\obj\Debug\LibraryClassProject.csproj.AssemblyReference.cache
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\LibraryClassProject\LibraryClassProject\obj\Debug\LibraryClassProject.csproj.CoreCompileInputs.cache
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\LibraryClassProject\LibraryClassProject\obj\Debug\LibraryClassProject.dll
+C:\Infinite Trainining 2025\CSharp\Assignment\Asiignment 7\LibraryClassProject\LibraryClassProject\obj\Debug\LibraryClassProject.pdb
