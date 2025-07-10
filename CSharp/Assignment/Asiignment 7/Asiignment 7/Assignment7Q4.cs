@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-?\/*
+/*
    * Create a class library with a function CalculateConcession()  
    * that takes age as an input and calculates concession for travel as below:
 If age <= 5 then “Little Champs - Free Ticket” should be displayed

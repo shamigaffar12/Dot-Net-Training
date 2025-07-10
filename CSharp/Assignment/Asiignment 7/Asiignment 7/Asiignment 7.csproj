@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Asiignment_7.Assignment7Q3</StartupObject>
+    <StartupObject>Asiignment_7.Assignment7Q2</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

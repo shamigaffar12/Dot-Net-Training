@@ -70,7 +70,7 @@ namespace Asiignment_7
                 Console.WriteLine("5.Display sorted emplooye By their name(ascending)");
                 Console.WriteLine("6.Exit");
                 Console.WriteLine("Enter your choice : ");
-                choice = int.Parse(Console.ReadLine());
+                choice = Convert.ToInt32(Console.ReadLine());
 
 
                 switch (choice)
@@ -125,9 +125,10 @@ namespace Asiignment_7
                 }
 
                 Console.WriteLine("************************************");
-                Console.Read();
+                
 
             }while (choice != 6) ;
+            Console.Read();
         }
 
 
@@ -141,6 +142,7 @@ namespace Asiignment_7
                 Console.WriteLine($"ID: {item.EmpId}, Name: {item.EmpName}, City: {item.EmpCity}, Salary: {item.EmpSalary}");
             }
 
-        }
+       
+       } 
     }
 }

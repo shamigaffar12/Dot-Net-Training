@@ -17,13 +17,10 @@ namespace Asiignment_7
     {
       
         public static string input;
-        public static List<string> wordlist = new List<string>();
+        public static List<string> wordlist = new List<string>(input.Split(',', (char)StringSplitOptions.RemoveEmptyEntries));
         public static List<string> GetList()
         {
-            Console.WriteLine("Enter the elements  :");
             
-            input = Console.ReadLine();
-           
             var value = new List<string>(input.Split(',' ,  (char)StringSplitOptions.RemoveEmptyEntries));
            
             foreach(var item in value)
@@ -42,11 +39,11 @@ namespace Asiignment_7
                                         where name.StartsWith("a") && name.EndsWith("m")
                                         select name;
           
-            List<string> result = new List<string>();
+            var result = new List<string>();
             
             foreach (var item in finds)
             {
-                result.Add(string.Join(" ,",item));
+                result.Add(string.Join("  -> ",item));
             }
             return result;
         }
@@ -58,6 +55,9 @@ namespace Asiignment_7
         {
             FindWords letter = new FindWords();
             //FindWords.GetList();
+            Console.WriteLine("Enter element in list separated by comma :");
+            FindWords.input = Convert.ToString(Console.ReadLine());
+            FindWords.GetList();
            var result=letter.FindWord();
             foreach(var item in result)
             {
