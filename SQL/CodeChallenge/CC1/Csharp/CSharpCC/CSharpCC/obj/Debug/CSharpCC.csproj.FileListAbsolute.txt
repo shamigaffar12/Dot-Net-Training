@@ -1,0 +1,7 @@
+C:\Infinite Trainining 2025\SQL\CodeChallenge\CC1\Csharp\CSharpCC\CSharpCC\bin\Debug\CSharpCC.exe.config
+C:\Infinite Trainining 2025\SQL\CodeChallenge\CC1\Csharp\CSharpCC\CSharpCC\bin\Debug\CSharpCC.exe
+C:\Infinite Trainining 2025\SQL\CodeChallenge\CC1\Csharp\CSharpCC\CSharpCC\bin\Debug\CSharpCC.pdb
+C:\Infinite Trainining 2025\SQL\CodeChallenge\CC1\Csharp\CSharpCC\CSharpCC\obj\Debug\CSharpCC.csproj.AssemblyReference.cache
+C:\Infinite Trainining 2025\SQL\CodeChallenge\CC1\Csharp\CSharpCC\CSharpCC\obj\Debug\CSharpCC.csproj.CoreCompileInputs.cache
+C:\Infinite Trainining 2025\SQL\CodeChallenge\CC1\Csharp\CSharpCC\CSharpCC\obj\Debug\CSharpCC.exe
+C:\Infinite Trainining 2025\SQL\CodeChallenge\CC1\Csharp\CSharpCC\CSharpCC\obj\Debug\CSharpCC.pdb
