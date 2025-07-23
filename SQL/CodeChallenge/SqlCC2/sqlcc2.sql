@@ -11,7 +11,7 @@ select Datename(WEEKDAY ,@dob) as ' birthday'
 
 
 ---Q2.	Write a query to display your age in days
-declare @birthdate date = '1990-07-23';
+declare @birthdate date = '2025-02-25';
 
 ;with cte_dob as (
     select @birthdate as birthdate
