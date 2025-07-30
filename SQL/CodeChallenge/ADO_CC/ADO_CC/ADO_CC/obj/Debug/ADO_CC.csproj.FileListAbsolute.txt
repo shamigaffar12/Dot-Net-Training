@@ -1,0 +1,7 @@
+C:\Infinite Trainining 2025\SQL\CodeChallenge\ADO_CC\ADO_CC\ADO_CC\bin\Debug\ADO_CC.exe.config
+C:\Infinite Trainining 2025\SQL\CodeChallenge\ADO_CC\ADO_CC\ADO_CC\bin\Debug\ADO_CC.exe
+C:\Infinite Trainining 2025\SQL\CodeChallenge\ADO_CC\ADO_CC\ADO_CC\bin\Debug\ADO_CC.pdb
+C:\Infinite Trainining 2025\SQL\CodeChallenge\ADO_CC\ADO_CC\ADO_CC\obj\Debug\ADO_CC.csproj.AssemblyReference.cache
+C:\Infinite Trainining 2025\SQL\CodeChallenge\ADO_CC\ADO_CC\ADO_CC\obj\Debug\ADO_CC.csproj.CoreCompileInputs.cache
+C:\Infinite Trainining 2025\SQL\CodeChallenge\ADO_CC\ADO_CC\ADO_CC\obj\Debug\ADO_CC.exe
+C:\Infinite Trainining 2025\SQL\CodeChallenge\ADO_CC\ADO_CC\ADO_CC\obj\Debug\ADO_CC.pdb
