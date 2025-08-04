@@ -115,3 +115,9 @@ begin
     where d.dname = 'sales'
       and e.salary < 1500;
 end;
+ 
+ exec asssignments.dbo.emp.updateSal
+
+ SELECT * FROM sys.servers WHERE name = 'ICS-LT-4V2CJ84\SQLEXPRESS';
+
+ EXEC sp_testlinkedserver 'ICS-LT-4V2CJ84\SQLEXPRESS';

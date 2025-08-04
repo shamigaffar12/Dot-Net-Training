@@ -40,7 +40,7 @@ namespace ADO_CC
                 Console.WriteLine("EnterEMp DEtails  Name , Gender , Salary");
                 string Name = Console.ReadLine();
                 string Gender = Console.ReadLine();
-                float  Salary = Convert.ToSingle(Console.ReadLine());
+                float  Salary = float.Parse(Console.ReadLine());
                 SqlCommand cmd = new SqlCommand("getEmpDetail", con);
 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -52,13 +52,12 @@ namespace ADO_CC
 
 
 
-                SqlParameter paramId = new SqlParameter("@eEmpId", SqlDbType.Int) { Direction = ParameterDirection.Output };
+                SqlParameter paramId = new SqlParameter("@eEmpId", SqlDbType.Int) { Direction = ParameterDirection.ReturnValue };
                 cmd.Parameters.Add(paramId);
-                SqlParameter paramSal = new SqlParameter("@eSalary", SqlDbType.Decimal) { Direction = ParameterDirection.Output };
-                cmd.Parameters.Add(paramSal);
+            
                 
                 
-              SqlParameter paramName = new SqlParameter("@eName", SqlDbType.VarChar) { Direction = ParameterDirection.Output };
+              SqlParameter paramName = new SqlParameter("@eName", SqlDbType.VarChar) { Direction = ParameterDirection.Output} {paramName.Value = 34;
                 cmd.Parameters.Add(paramName);
                 SqlParameter paramGender = new SqlParameter("@eGender", SqlDbType.VarChar, 10) { Direction = ParameterDirection.Output };
                 

@@ -1,0 +1,6 @@
+C:\Infinite Trainining 2025\CSharp\Assignment\ADO_Assignment\ADO_Assignment\obj\Debug\ADO_Assignment.csproj.CoreCompileInputs.cache
+C:\Infinite Trainining 2025\CSharp\Assignment\ADO_Assignment\ADO_Assignment\bin\Debug\ADO_Assignment.exe.config
+C:\Infinite Trainining 2025\CSharp\Assignment\ADO_Assignment\ADO_Assignment\bin\Debug\ADO_Assignment.exe
+C:\Infinite Trainining 2025\CSharp\Assignment\ADO_Assignment\ADO_Assignment\bin\Debug\ADO_Assignment.pdb
+C:\Infinite Trainining 2025\CSharp\Assignment\ADO_Assignment\ADO_Assignment\obj\Debug\ADO_Assignment.exe
+C:\Infinite Trainining 2025\CSharp\Assignment\ADO_Assignment\ADO_Assignment\obj\Debug\ADO_Assignment.pdb

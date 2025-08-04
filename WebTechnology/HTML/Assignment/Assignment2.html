@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        .container {
+            position: relative;
+            display: inline-block;
+            width: 300px;
+        }
+
+        .i1 {
+            display: block;
+            width: 300px;
+            height: auto;
+        }
+
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            opacity: 0;
+            transition: 0.3s ease;
+        }
+
+        .container:hover .overlay {
+            opacity: 1;
+        }
+
+        .b1 {
+            padding: 15px 25px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: darkcyan;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 3.5px #1bcca0;
+        }
+
+            .b1:hover {
+                background-color: #3e8e41
+            }
+
+            .b1:active {
+                background-color: #3e8e41;
+                box-shadow: 0 5px #666;
+                transform: translateY(4px);
+            }
+
+        .a1 {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            background-color: moccasin;
+            animation-name: test;
+            text-decoration-color: #1a007e;
+            text-align: center;
+            animation-duration: 500ms;
+            animation-delay: 300ms;
+        }
+
+        @keyframes test {
+            0% {
+                background-color: red;
+            }
+
+            25% {
+                background-color: yellow;
+                left: 200px;
+                top: 0px;
+            }
+
+            50% {
+                background-color: blue;
+                left: 200px;
+                top: 200px;
+            }
+
+            75% {
+                background-color: green;
+                top: 200px;
+            }
+
+            100% {
+                background-color: chartreuse;
+            }
+        }
+
+
+        .t1 {
+            max-width: 900px;
+            margin: auto;
+            background: #003366;
+            border-radius: 10px;
+            box-sizing: border-box;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        }
+
+        .t2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+            .t2 img {
+                
+                margin-bottom: 1rem;
+                object-fit:cover;
+                max-width: 220px;
+                width: 50%;
+                height: auto;
+                opacity: 0;
+                transform: scale(0.8) translateY(-15px);
+                transform-origin: center center;
+                animation: heroFadeZoom 1.2s ease-out 0.3s forwards;
+                will-change: transform, opacity;
+            }
+
+        @keyframes heroFadeZoom {
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes zoomPan {
+            from {
+                transform: scale(1) translateY(0);
+            }
+
+            to {
+                transform: scale(1.3) translateY(-20px);
+            }
+        }
+
+        header h1 {
+           
+            font-size: 3rem;
+            color: #ffd700;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            animation: fadeIn 2s ease-out 1s forwards;
+            opacity: 0;
+        }
+        
+        header p {
+
+            margin-left :4px;
+            font-size: 1.2rem;
+          
+            color: moccasin;
+            animation: fadeIn 2s ease-out 1.5s forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        section {
+            margin-left:10px;
+            font-size: 1.2rem;
+           
+            color: moccasin;
+            animation: slideIn 1s ease-out 1s both;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-30px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        h2 {
+            color: #ffd700;
+            font-size: 2rem;
+            
+            border-bottom: 2px solid #ffd700;
+            display: inline-block;
+            padding:10px,0px;
+        }
+
+        ul {
+            list-style: inside circle;
+            margin-top: 15px;
+            font-size: 1.2rem;
+            
+            color: moccasin;
+        }
+
+        li {
+            margin: 10px 0;
+            
+            font-size: 1.2rem;
+          
+            color: moccasin;
+        }
+
+        
+    </style>
+    <title>Assignment 2</title>
+</head>
+<body>
+    <div class="container">
+        <img src="images/p1.jpg" alt="flower" class="i1">
+        <div class="overlay">Flower</div>
+    </div>
+    <br />
+    <br />
+
+    <!--2. Create a CSS3 based button using style elements/properties-->
+    <button class="b1">button b1</button>
+    <br />
+    <br />
+    <!--3. Define a Descriptive/Definition List using your own items-->
+    <dl>
+        <dt>Mobile Brands</dt>
+        <ol type="1">
+            <li>
+        <dd>Samsung s25</dd></li>
+        <dd>
+            <ul>
+                <li>6.1" AMOLED 120Hz Display</li>
+                <li>Snapdragon 8 Gen 2</li>
+                <li>Triple 50MP + 12MP + 10MP Cameras</li>
+                <li>Price: 80000</li>
+            </ul>
+        </dd>
+        <li>
+        <dd>Google Pixel 9</dd></li>
+        <dd>
+            <ul>
+                <li>6.1" AMOLED 120Hz retina Display</li>
+                <li>Snapdragon 8 elite</li>
+                <li>Triple 12MP + 110MP + 10MP Cameras</li>
+                <li>Price: 56000</li>
+            </ul>
+        </dd>
+        <li>
+        <dd>Motorola edge 50</dd></li> </ol>
+        <dd>
+            <ul>
+                <li>5.3" poled 144Hz smooth Display</li>
+                <li>Mediatek Dimensity 83400</li>
+                <li>Camera 20 MP + 3x with ois and telescope</li>
+                <li>Price: 340000</li>
+            </ul>
+        </dd>
+
+    </dl>
+    <br />
+    <br/>
+    <!--4. How to make use of animation-delay , and then restart again-->
+    <div class="a1">Animation Delay</div>
+    <br />
+    <br />
+    <!--Create a Tribute Page of a person with his or her image on the top of the page. Name the person
+    Below that give his/her achievements or any information about the person.-->
+    <div class="t1">
+        <header class="t2">
+          <img src="images/mahi.jpg" alt="captain cool" />
+        <h1 class="ha2">Mahendra Singh Dhoni</h1>
+        <p>'Captain Cool – The Finisher'</p>
+        </header>
+        <section>
+            <h2>About</h2>
+            <ul>
+                
+                <p style="text-decoration-color: moccasin; margin:auto">
+                    Born on 7 July 1981 in Ranchi, Jharkhand, Dhoni initially <br />
+                    started his career as railway TTE and becomes one of cricket's most iconic captains.<br />
+                    He captained India  in all three major ICC events: <br />
+                    1. T20 World Cup (2007)<br />
+                    2. ICC Cricket World Cup (2011)<br />
+                    3. Champions Trophy (2013)
+                </p></ul>
+</section>
+        <section>
+            <h2>Legendary Achievements</h2>
+            <ul>
+                <li>Only captain to win T20 WC, ODI WC and Champions Trophy.</li>
+                <li>Scored 10,773 ODI runs with a career average of 50.6.</li>
+                <li>Held record for most stumpings 195+ and most matches as </li>
+                <li>captain across ODI formats as 200 ODIs matches and finishes off.</li>
+                <li>Led India to the number‑one Test ranking for 21 months year 2009–11.</li>
+                <li>ICC Hall of Fame inductee (2025), 17,266 international runs and 829 dismissals in 538 matches </li>
+            </ul>
+        </section>
+        <section>
+            <h2>The Myth-The Mahi-The Legend?</h2>
+            <ul>
+            <p style="margin-left:10px">
+                Dhoni’s calm under pressure, finishing skills,   strategic decisions<br />
+                and wicket‑keeping brilliance earned him the nickname “Captain Cool.”<br />
+            </p></ul>
+       
+        </section>
+        
+        
+    </div>
+
+</body>
+</html>
