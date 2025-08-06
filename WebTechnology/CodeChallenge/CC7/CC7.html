@@ -1,0 +1,144 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.4.1.min.js"></script>
+    <style>
+        .div1 > h1 {
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        1st Number : <input id="i1" type="number" placeholder="Enter 1st number" />
+        <br />
+        2nd Number : <input id="i2" type="number" placeholder="Enter 2nd Number" />
+        <br />
+        <button id="b1" name="Multiply" onclick="multi()">Multiply</button>
+        <button id="b2" name="Divide" onclick="division()">Divide</button>
+        <br />
+        <br />
+        The result is :
+        <br />
+        <p id="result"></p>
+        <br />
+
+        <!-- Q2.Loop to check even or odd-->
+        <h2>Even or Odd Check </h2>
+        <pi id="p2"></pi>
+        <br />
+
+
+        <!--Q3.Event on click-->
+        <button id="h1" onclick="hello()">Hello</button>
+        <p id="p1">output</p>
+        <!--Q4.Table-->
+        <h2>Table </h2>
+        <table >
+            <tr>
+            <td>First Name</td>
+            </tr>
+            <tr>
+            <td>Last Name</td>
+            </tr>
+            <tr>
+                <td>Course</td>
+            </tr>
+            <tr>
+            <td>Branch<td>
+            </tr>
+        </table>
+
+
+    </div>
+    <div class="div1">
+        <h1>Infinite Computer Solutions</h1><br />
+        <h2>All It Services </h2><br />
+        <h3>Digital Solutions</h3><br />
+        <h1>Best Place to Work</h1>
+        <h1>Best Place to Work</h1>
+
+    </div>
+    <!--Q 6 and Q7-->
+    <div id="d2">
+        <ul>
+            <li id="l1">CSHARP</li>
+            <li id="l2">SQL</li>
+            <li id="l2">ADO</li>
+        </ul>
+
+        Selected Item : <p id="r1"></p>
+    </div>
+    <div>
+        Append Field :<input id="a1" type="text" />
+        <p id="append"></p>
+    </div>
+    <script>
+        function multi() {
+            var num1 = document.getElementById("i1").value;
+            var num2 = document.getElementById("i2").value;
+            var result = num1 * num2;
+            document.getElementById("result").innerText = result;
+        }
+
+        function division() {
+            var num1 = document.getElementById("i1").value;
+            var num2 = document.getElementById("i2").value;
+            if (num1 == 0 || num2 == 0) {
+                document.getElementById("result").innerText = "Cannot do Zero Division";
+            }
+            else {
+                var result = num1 / num2;
+                document.getElementById("result").innerText = result;
+            }
+
+        }
+        function hello() {
+            document.getElementById("p1").innerText = "Hello ! Good Morning";
+        }
+     
+        for (let i = 0; i <= 15; i++) {
+            if (i % 2 === 0) {
+               var result= document.write(" " + i + "is even " + "<br/>");
+            } else {
+              var result=  document.write(" " + i + "is odd "+ "<br/>");
+            }
+            
+        }
+        document.getElementById("p2").innerText = result;
+
+
+     
+    </script>
+ 
+        <script>
+            $(document).ready(function () {
+            var item = $('li').eq(0).text();
+            $("#r1").text(item);
+            });
+
+            $(document).ready(function () {
+                
+                $('#l1').prepend("0");
+
+                $('#l2').prepend("1");
+
+                $('#l3').prepend("2");
+            });
+            $(document).ready(function () {
+                $('#a1').on('change', function () {
+                    $('#append').append("Hello I am Shami");
+  
+            });
+            });
+    
+    
+
+
+    </script>
+
+</body>
+</html>
