@@ -1,73 +1,61 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Heading and Form Example</title>
-  <style>
-    /* For the third highest heading center alignment */
-    .center-heading {
-      text-align: center;
-    }
-    /* For the 'Important' heading with underline and red color */
-    .important {
-      color: #ff0000;
-      text-decoration: underline;
-    }
-    /* Color for Services heading */
-    .services {
-      color: #0066cc;
-    }
-  </style>
+    <meta charset="utf-8" />
+    <title>Assignment 1</title>
 </head>
 <body>
+    <h1>Welcome</h1>
+    <br />
+    <br />
+    <br />
+    <h2>About Us</h2>
+    <br />
+    <br />
+    <br />
+    <center>
+        <h3>Welcome To HTML</h3>
+    </center>
+    <h4 style="color : red">Services</h4>
+    <br />
+    <br />
+    <br />
+    <h4 style="color: #ff0000; text-decoration: underline">Important</h4>
+    <br />
+    <br />
+    <br />
+    <label for="name">User Name</label>
+    <input type="text" placeholder="Enter your name" />
+    <br />
+    <br />
+    <br />
 
-  <!-- 1. Largest heading -->
-  <h1>Welcome</h1>
+    <label for="password">Password: </label>
 
-  <!-- 2. Second highest heading -->
-  <h2>About Us</h2>
+    <input type="password" id="password" name="password" placeholder="Enter your password" />
+    <br />
+    <br />
+    <br />
+    <input type="checkbox" id="agree" name="agree" />
+    <label for="agree">I Agree</label>
+    <br />
+    <br />
+    <br />
+    <audio controls>
+        <source src="music.mp3" type="audio/mpeg" />
+        no audio support
+    </audio>
 
-  <!-- 3. Third highest heading aligned center -->
-  <h3 class="center-heading">Welcome To HTML</h3>
+    <br />
+    <br />
+    <br />
 
-  <!-- 4. Heading with text color #0066cc -->
-  <h4 class="services">Services</h4>
+    <ul>
+        <li>Red</li>
+        <li>Blue</li>
+    </ul>
 
-  <!-- 5. Underlined heading with red color -->
-  <h5 class="important">Important</h5>
-
-  <!-- 6. Text input for user's name -->
-  <label for="name">Name: </label>
-  <input type="text" id="name" name="name" />
-
-  <br><br>
-
-  <!-- 7. Password input with placeholder -->
-  <label for="password">Password: </label>
-  <input type="password" id="password" name="password" placeholder="Enter your password" />
-
-  <br><br>
-
-  <!-- 8. Checkbox input with label -->
-  <input type="checkbox" id="agree" name="agree" />
-  <label for="agree">I Agree</label>
-
-  <br><br>
-
-  <!-- 9. Audio element with controls -->
-  <audio controls>
-    <source src="music.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-  </audio>
-
-  <br><br>
-
-  <!-- 10. Unordered list -->
-  <ul>
-    <li>Red</li>
-    <li>Blue</li>
-  </ul>
 
 </body>
 </html>
