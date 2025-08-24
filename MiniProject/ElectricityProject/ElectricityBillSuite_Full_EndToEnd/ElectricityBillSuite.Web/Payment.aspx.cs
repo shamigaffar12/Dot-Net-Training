@@ -1,0 +1,1 @@
+using System; public partial class Payment : System.Web.UI.Page { protected void Page_Load(object s, EventArgs e) { } }

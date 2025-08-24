@@ -1,0 +1,24 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+<!DOCTYPE html><html lang="en"><head runat="server"><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+<link href="Styles/adani.css" rel="stylesheet" />
+<title>JBVNL</title></head><body><form id="form1" runat="server">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background:linear-gradient(90deg,#0b4ea2,#1fb6ff)"><div class="container">
+<a class="navbar-brand" href="Default.aspx"><img src="Styles/jbvnl_logo.png" width="44" height="44" class="rounded me-2" />JBVNL</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMain"><span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="navMain"><ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="Default.aspx">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="BillEstimator.aspx">Estimator</a></li>
+<li class="nav-item"><a class="nav-link" href="Payment.aspx">Pay</a></li>
+<li class="nav-item"><a class="nav-link" href="NewConnection.aspx">New Conn.</a></li>
+<li class="nav-item"><a class="nav-link" href="Outage.aspx">Outages</a></li>
+<li class="nav-item"><a class="nav-link" href="UserLogin.aspx">User Login</a></li>
+<li class="nav-item"><a class="nav-link" href="AdminLogin.aspx">Admin</a></li>
+</ul></div></div></nav>
+<div class="container my-4"><asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder></div>
+<footer class="bg-light py-3"><div class="container d-flex justify-content-between"><div>© 2025 JBVNL</div><div>Help: 1912 | support@jbvnl.com</div></div></footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="Scripts/adani.js"></script>
+</form></body></html>
