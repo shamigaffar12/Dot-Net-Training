@@ -24,13 +24,13 @@ namespace ElectricityBillProject
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// lblMsg control.
+        /// lblStatus control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblMsg;
+        protected global::System.Web.UI.WebControls.Label lblStatus;
 
         /// <summary>
         /// txtConsumer control.
@@ -51,57 +51,48 @@ namespace ElectricityBillProject
         protected global::System.Web.UI.WebControls.TextBox txtAmount;
 
         /// <summary>
-        /// btnGenerateQR control.
+        /// ddlMethod control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnGenerateQR;
+        protected global::System.Web.UI.WebControls.DropDownList ddlMethod;
 
         /// <summary>
-        /// btnConfirmPayment control.
+        /// btnGenQR control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnConfirmPayment;
+        protected global::System.Web.UI.WebControls.Button btnGenQR;
 
         /// <summary>
-        /// qrSection control.
+        /// qrImage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl qrSection;
+        protected global::System.Web.UI.WebControls.Image qrImage;
 
         /// <summary>
-        /// receiptSection control.
+        /// btnPayNow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl receiptSection;
+        protected global::System.Web.UI.WebControls.Button btnPayNow;
 
         /// <summary>
-        /// litReceipt control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litReceipt;
-
-        /// <summary>
-        /// btnEmailPDF control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEmailPDF;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

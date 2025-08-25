@@ -1,0 +1,17 @@
+﻿@model MVCCC_9.Models.Customer
+
+<h2>Customer Details for Order ID 10248</h2>
+
+@if (Model != null)
+{
+    <ul>
+        <li><strong>Customer ID:</strong> @Model.CustomerID</li>
+        <li><strong>Company Name:</strong> @Model.CompanyName</li>
+        <li><strong>Contact Name:</strong> @Model.ContactName</li>
+        <li><strong>Country:</strong> @Model.Country</li>
+    </ul>
+}
+else
+{
+    <p>No customer found for this order.</p>
+}
