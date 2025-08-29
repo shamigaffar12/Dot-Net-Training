@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using DatabaseConnection;
 
@@ -38,14 +39,32 @@ namespace ElectricityBillProject
                     // Pending Concerns
                     SqlCommand cmd4 = new SqlCommand("SELECT COUNT(*) FROM Concerns WHERE status = 'Open'", con);
                     lblConcerns.Text = cmd4.ExecuteScalar().ToString();
+                    //
+
 
                     con.Close();
                 }
             }
             catch (Exception ex)
             {
-                lblMsg.Text = "Error loading dashboard: " + ex.Message;
+                lblMsg.Text = "Error loading dashboard ";
             }
         }
+            protected void lnkViewConnections_Click(object sender, EventArgs e)
+            {
+                using (SqlConnection con = DBHandler.GetConnection())
+                {
+                    SqlCommand cmd = new SqlCommand("SELECT * FROM Connections", con);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
+
+                    GridViewConnections.DataSource = dt;
+                    GridViewConnections.DataBind();
+                    GridViewConnections.Visible = true;
+                }
+            }
+
+        }
     }
-}
+

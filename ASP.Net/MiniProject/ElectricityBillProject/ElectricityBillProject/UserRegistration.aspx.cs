@@ -21,7 +21,7 @@ namespace ElectricityBillProject
             DateTime dob;
             if (!DateTime.TryParse(dobText, out dob))
             {
-                dob = DateTime.MinValue; // Treat as null if invalid
+                dob = DateTime.MinValue; 
             }
 
             if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(phone) || string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password))
@@ -44,7 +44,7 @@ namespace ElectricityBillProject
                     cmd.Parameters.AddWithValue("@name", name);
                     cmd.Parameters.AddWithValue("@phone", phone);
                     cmd.Parameters.AddWithValue("@email", email);
-                    cmd.Parameters.AddWithValue("@password", password);  // Remember to hash in production!
+                    cmd.Parameters.AddWithValue("@password", password);  
 
                     if (dob == DateTime.MinValue)
                         cmd.Parameters.AddWithValue("@dob", DBNull.Value);
@@ -58,7 +58,6 @@ namespace ElectricityBillProject
                     lblMsg.CssClass = "text-success";
                     lblMsg.Text = "Registration successful! You can now login.";
 
-                    // Clear inputs
                     txtName.Text = "";
                     txtPhone.Text = "";
                     txtEmail.Text = "";
@@ -68,7 +67,7 @@ namespace ElectricityBillProject
             }
             catch (SqlException ex)
             {
-                if (ex.Number == 2627) // Unique constraint violation (email)
+                if (ex.Number == 2627)
                 {
                     lblMsg.CssClass = "text-danger";
                     lblMsg.Text = "Email already registered.";
@@ -76,13 +75,13 @@ namespace ElectricityBillProject
                 else
                 {
                     lblMsg.CssClass = "text-danger";
-                    lblMsg.Text = "Database error: " + ex.Message;
+                    lblMsg.Text = "Database error:  Error Occured";
                 }
             }
             catch (Exception ex)
             {
                 lblMsg.CssClass = "text-danger";
-                lblMsg.Text = "Error: " + ex.Message;
+                lblMsg.Text = "Error ! ";
             }
         }
     }

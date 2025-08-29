@@ -1,4 +1,0 @@
-﻿Clean started...
-1>------ Clean started: Project: ElectricityBillProject, Configuration: Debug Any CPU ------
-2>------ Clean started: Project: DatabaseConnection, Configuration: Debug Any CPU ------
-========== Clean: 2 succeeded, 0 failed, 0 skipped ==========

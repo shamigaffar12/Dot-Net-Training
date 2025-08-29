@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <title>Admin Dashboard - EB Utility</title>
 
-    <!-- Bootstrap 5 CSS -->
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
 
     <style>
@@ -17,14 +17,15 @@
             color: white;
         }
 
-        .sidebar a {
+        .sidebar a, .sidebar .link-button {
             color: white;
             display: block;
             padding: 10px 20px;
             text-decoration: none;
+            cursor: pointer;
         }
 
-        .sidebar a:hover {
+        .sidebar a:hover, .sidebar .link-button:hover {
             background-color: #495057;
         }
 
@@ -39,7 +40,7 @@
     <form id="form1" runat="server">
         <div class="container-fluid">
             <div class="row">
-                <!-- Sidebar -->
+                
                 <div class="col-md-2 sidebar">
                     <h4 class="text-center">⚡ EB Admin</h4>
                     <hr />
@@ -48,15 +49,16 @@
                     <a href="ConcernsAdmin.aspx">📝 Concerns</a>
                     <a href="RevenueReport.aspx">💰 Revenue</a>
                     <a href="Notices.aspx">📢 Notices</a>
-                    <a href="AddBill.aspx" >AddBill</a>
+                    <a href="AddBill.aspx">AddBill</a>
                     
-
-      
-               
-                    <a href="Logout.aspx">🚪 Logout</a>
+                    <asp:LinkButton ID="lnkViewConnections" runat="server" OnClick="lnkViewConnections_Click" CssClass="link-button">
+                      View Connections
+                    </asp:LinkButton>
+                    
+                    <a href="Default.aspx">🚪 Logout</a>
                 </div>
 
-                <!-- Main Content -->
+             
                 <div class="col-md-10 p-4">
                     <h3>📊 Admin Dashboard</h3>
                     <hr />
@@ -91,6 +93,16 @@
                         </div>
                     </div>
 
+               
+                    <asp:GridView 
+                        ID="GridViewConnections" 
+                        runat="server" 
+                        AutoGenerateColumns="true" 
+                        Visible="false" 
+                        CssClass="table table-striped table-bordered mt-4"
+                    />
+
+               
                     <asp:Label ID="lblMsg" runat="server" CssClass="text-danger mt-3 d-block"></asp:Label>
                 </div>
             </div>

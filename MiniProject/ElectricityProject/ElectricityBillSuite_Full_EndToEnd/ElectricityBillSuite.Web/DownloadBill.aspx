@@ -1,1 +1,0 @@
-<%@ Page Language="C#" AutoEventWireup="true" CodeFile="DownloadBill.aspx.cs" Inherits="DownloadBill" %><asp:ContentPlaceHolder ID="MainContent" runat="server"></asp:ContentPlaceHolder>

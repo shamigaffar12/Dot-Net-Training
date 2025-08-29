@@ -69,7 +69,7 @@ namespace ElectricityBillProject.Models
             }
             catch (Exception ex)
             {
-                return "SMTP error: " + ex.Message;
+                return " error " ;
             }
         }
     }

@@ -9,7 +9,6 @@ namespace ElectricityBillProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Optional: load recent or all customers on first load
             if (!IsPostBack)
             {
                 LoadCustomers("");

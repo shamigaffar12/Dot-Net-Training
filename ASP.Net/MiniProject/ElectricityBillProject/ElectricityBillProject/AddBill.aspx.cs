@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Text.RegularExpressions;
-using System.Web.UI;
-using ElectricityBillProject.Models;  
-using DatabaseConnection;             
+using System.Web.UI.WebControls;
+using ElectricityBillProject.Models;
 
 namespace ElectricityBillProject
 {
@@ -10,81 +9,127 @@ namespace ElectricityBillProject
     {
         ElectricityBoard eb = new ElectricityBoard();
 
-        protected void btnGen_Click(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            Page.UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
+
+            if (!IsPostBack)
+            {
+                pnlAskCount.Visible = true;
+                pnlInputBills.Visible = false;
+                lblMsg.Text = "";
+                lblMsg.CssClass = "text-danger";
+            }
+        }
+
+        protected void btnSetCount_Click(object sender, EventArgs e)
         {
             lblMsg.Text = "";
-            lblMsg.CssClass = "";
 
-            try
+            if (!int.TryParse(txtBillCount.Text.Trim(), out int count) || count <= 0 || count > 20)
             {
-                string consumerNumber = txtConsumer.Text.Trim();
-
-                // Validate Consumer Number - throws FormatException if invalid
-                ValidateConsumerNumber(consumerNumber);
-
-                ElectricityBill bill = new ElectricityBill
-                {
-                    ConsumerNumber = consumerNumber,
-                    ConsumerName = txtName.Text.Trim()
-                };
-
-                int unitsConsumed;
-                if (!int.TryParse(txtUnits.Text.Trim(), out unitsConsumed))
-                {
-                    lblMsg.CssClass = "text-danger";
-                    lblMsg.Text = "Units must be a valid number.";
-                    return;
-                }
-
-                // BillValidator  for validation
-                var validator = new BillValidator();
-                string validationMsg = validator.ValidateUnitsConsumed(unitsConsumed);
-                if (validationMsg != "OK")
-                {
-                    lblMsg.CssClass = "text-danger";
-                    lblMsg.Text = validationMsg;
-                    return;
-                }
-
-                bill.UnitsConsumed = unitsConsumed;
-
-                // Calculate bill amount 
-                eb.CalculateBill(bill);
-
-                // Add bill to DB
-                eb.AddBill(bill);
-
-                lblMsg.CssClass = "text-success";
-                lblMsg.Text = $"Bill added successfully. Amount: ₹{bill.BillAmount:F2}";
+                lblMsg.Text = "Please enter a valid number between 1 and 20.";
+                return;
             }
-            catch (FormatException fex)
-            {
-                lblMsg.CssClass = "text-danger";
-                lblMsg.Text = fex.Message; 
-            }
-            catch (Exception ex)
-            {
-                lblMsg.CssClass = "text-danger";
-                lblMsg.Text = "Error: " + ex.Message;
-            }
+
+            rptBills.DataSource = new int[count];
+            rptBills.DataBind();
+
+            pnlAskCount.Visible = false;
+            pnlInputBills.Visible = true;
         }
 
-        protected void btnFetch_Click(object sender, EventArgs e)
+        protected void btnGenerateBills_Click(object sender, EventArgs e)
         {
-            int n = 5;
-            int.TryParse(txtN.Text.Trim(), out n);
-            var list = eb.Generate_N_BillDetails(n);
-            grid.DataSource = list;
-            grid.DataBind();
+            lblMsg.Text = "";
+            int successCount = 0;
+            int errorCount = 0;
+
+            var validator = new BillValidator();
+
+            foreach (RepeaterItem item in rptBills.Items)
+            {
+                var txtConsumer = (TextBox)item.FindControl("txtConsumer");
+                var txtName = (TextBox)item.FindControl("txtName");
+                var txtUnits = (TextBox)item.FindControl("txtUnits");
+
+                if (txtConsumer == null || txtName == null || txtUnits == null)
+                    continue;
+
+                string consumerNumber = txtConsumer.Text.Trim();
+                string consumerName = txtName.Text.Trim();
+                string unitsText = txtUnits.Text.Trim();
+
+                if (string.IsNullOrEmpty(consumerNumber) && string.IsNullOrEmpty(consumerName) && string.IsNullOrEmpty(unitsText))
+                    continue;
+
+                try
+                {
+                    ValidateConsumerNumber(consumerNumber);
+
+                    if (!int.TryParse(unitsText, out int unitsConsumed))
+                    {
+                        errorCount++;
+                        continue;
+                    }
+
+                    string validationMsg = validator.ValidateUnitsConsumed(unitsConsumed);
+                    if (validationMsg != "OK")
+                    {
+                        errorCount++;
+                        continue;
+                    }
+
+                    var bill = new ElectricityBill
+                    {
+                        ConsumerNumber = consumerNumber,
+                        ConsumerName = consumerName,
+                        UnitsConsumed = unitsConsumed
+                    };
+
+                    eb.CalculateBill(bill);
+                    eb.AddBill(bill);
+
+                    successCount++;
+                }
+                catch
+                {
+                    errorCount++;
+                }
+            }
+
+            if (successCount > 0)
+            {
+                lblMsg.CssClass = "text-success";
+                lblMsg.Text = $"Successfully added {successCount} bill(s).";
+            }
+            else
+            {
+                lblMsg.CssClass = "text-danger";
+                lblMsg.Text = "No valid bills to add.";
+            }
+
+            if (errorCount > 0)
+                lblMsg.Text += $" {errorCount} bill(s) had errors and were skipped.";
+
+         
+            pnlInputBills.Visible = false;
+            pnlAskCount.Visible = true;
+            txtBillCount.Text = "";
         }
 
-        // Validation method for Consumer Number
+        protected void btnBack_Click(object sender, EventArgs e)
+        {
+            pnlInputBills.Visible = false;
+            pnlAskCount.Visible = true;
+            lblMsg.Text = "";
+            txtBillCount.Text = "";
+        }
+
         private void ValidateConsumerNumber(string consumerNumber)
         {
             if (string.IsNullOrEmpty(consumerNumber) || !Regex.IsMatch(consumerNumber, @"^EB\d{5}$"))
-            {
                 throw new FormatException("Invalid Consumer Number");
-            }
         }
     }
 }

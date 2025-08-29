@@ -1,1 +1,0 @@
-Open ElectricityBillSuite.sln in Visual Studio. Run DB scripts in ebdbprj/Scripts to create EbDb. Update Web.config connection string and appSettings before running.

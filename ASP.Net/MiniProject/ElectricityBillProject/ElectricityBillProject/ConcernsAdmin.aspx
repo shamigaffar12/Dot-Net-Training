@@ -12,7 +12,7 @@
 
         <asp:Label ID="lblMsg" runat="server" CssClass="text-danger mb-3"></asp:Label>
 
-        <!-- Bulk Resolve All Open Concerns Button -->
+        
         <asp:Button ID="btnResolveAll" runat="server" Text="Resolve All Open Concerns" CssClass="btn btn-primary mb-3"
             OnClick="btnResolveAll_Click" />
 

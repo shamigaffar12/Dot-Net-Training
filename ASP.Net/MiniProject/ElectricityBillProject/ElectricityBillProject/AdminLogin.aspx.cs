@@ -20,7 +20,7 @@ namespace ElectricityBillProject
                     string query = "SELECT admin_id FROM Admins WHERE username = @u AND password = @p";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@u", username);
-                    cmd.Parameters.AddWithValue("@p", password); // ⚠️ For production, always hash passwords
+                    cmd.Parameters.AddWithValue("@p", password); 
 
                     object result = cmd.ExecuteScalar();
 
@@ -40,7 +40,7 @@ namespace ElectricityBillProject
             }
             catch (Exception ex)
             {
-                lblMsg.Text = "⚠️ Error: " + ex.Message;
+                lblMsg.Text = "⚠️ Error: " ;
             }
         }
     }

@@ -76,7 +76,7 @@ namespace ElectricityBillProject
             catch (Exception ex)
             {
                 lblTotal.CssClass = "text-danger";
-                lblTotal.Text = "Error loading report: " + ex.Message;
+                lblTotal.Text = "Error loading report " ;
             }
         }
     }

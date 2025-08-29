@@ -2,6 +2,7 @@
 using System.Data.SqlClient;
 using System.Web.UI;
 using DatabaseConnection;
+using ElectricityBillProject.Models;
 
 namespace ElectricityBillProject
 {
@@ -14,16 +15,11 @@ namespace ElectricityBillProject
 
             try
             {
-                // Validate inputs
+                
                 string consumerNumber = txtConsumer.Text.Trim();
                 string message = txtMessage.Text.Trim();
-
-                if (string.IsNullOrEmpty(consumerNumber))
-                {
-                    lblMsg.CssClass = "text-danger";
-                    lblMsg.Text = "Please enter your Consumer Number.";
-                    return;
-                }
+               
+                
 
                 if (string.IsNullOrEmpty(message))
                 {
@@ -45,7 +41,7 @@ namespace ElectricityBillProject
                 {
                     con.Open();
 
-                    // Insert concern
+                   
                     string query = @"
                         INSERT INTO Concerns(user_id, consumer_number, message, status, created_at)
                         VALUES (@user_id, @consumer_number, @message, 'Open', GETDATE())";
@@ -76,7 +72,7 @@ namespace ElectricityBillProject
             catch (Exception ex)
             {
                 lblMsg.CssClass = "text-danger";
-                lblMsg.Text = "Error: " + ex.Message;
+                lblMsg.Text = "Error " ;
             }
         }
     }

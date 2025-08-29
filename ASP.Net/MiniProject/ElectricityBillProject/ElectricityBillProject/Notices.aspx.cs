@@ -42,7 +42,7 @@ namespace ElectricityBillProject
             catch (Exception ex)
             {
                 lblMsg.CssClass = "text-danger";
-                lblMsg.Text = "Error loading data: " + ex.Message;
+                lblMsg.Text = "Error loading data " ;
             }
         }
 
@@ -52,6 +52,8 @@ namespace ElectricityBillProject
             lblMsg.Text = "";
 
             string consumerNumber = txtConsumer.Text.Trim();
+
+           
 
             if (string.IsNullOrEmpty(consumerNumber))
             {
@@ -66,7 +68,7 @@ namespace ElectricityBillProject
                 {
                     con.Open();
 
-                    // Insert legal notice record
+                   
                     using (SqlCommand cmd = new SqlCommand(@"
                         INSERT INTO Notices (consumer_number, message, created_at)
                         VALUES (@c, @m, GETDATE())", con))
@@ -79,7 +81,7 @@ namespace ElectricityBillProject
                     con.Close();
                 }
 
-                // Attempt to find consumer email and send notice email
+                
                 string emailResult = "(Email not sent)";
 
                 using (SqlConnection con2 = DBHandler.GetConnection())
@@ -114,12 +116,12 @@ namespace ElectricityBillProject
                 }
 
                 lblMsg.CssClass = "text-success";
-                lblMsg.Text = "Notice recorded. Email status: " + emailResult;
+                lblMsg.Text = "Notice recorded " ;
             }
             catch (Exception ex)
             {
                 lblMsg.CssClass = "text-danger";
-                lblMsg.Text = "Error sending notice: " + ex.Message;
+                lblMsg.Text = "Error sending notice " ;
             }
         }
     }

@@ -44,7 +44,7 @@ namespace ElectricityBillProject
             }
             catch (Exception ex)
             {
-                lblMsg.Text = "Error loading concerns: " + ex.Message;
+                lblMsg.Text = "Error loading concerns " ;
             }
         }
 
@@ -75,7 +75,7 @@ namespace ElectricityBillProject
                 }
                 catch (Exception ex)
                 {
-                    lblMsg.Text = "Error resolving concern: " + ex.Message;
+                    lblMsg.Text = "Error resolving concern " ;
                 }
             }
         }
@@ -102,7 +102,7 @@ namespace ElectricityBillProject
             }
             catch (Exception ex)
             {
-                lblMsg.Text = "Error resolving concerns: " + ex.Message;
+                lblMsg.Text = "Error resolving concerns " ;
             }
         }
     }

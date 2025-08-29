@@ -11,7 +11,7 @@ namespace ElectricityBillProject
 {
     public partial class BillReceiptPdf : System.Web.UI.Page
     {
-        // PDF Event Handler (Header/Footer)
+      
         public class PdfHeaderFooter : PdfPageEventHelper
         {
             public override void OnEndPage(PdfWriter writer, Document document)
@@ -19,7 +19,7 @@ namespace ElectricityBillProject
                 PdfContentByte cb = writer.DirectContent;
                 Rectangle pageSize = document.PageSize;
 
-                // Logo
+                
                 string logoPath = HttpContext.Current.Server.MapPath("~/Styles/jbvnl_logo.png");
                 if (System.IO.File.Exists(logoPath))
                 {
@@ -29,12 +29,11 @@ namespace ElectricityBillProject
                     cb.AddImage(logo);
                 }
 
-                // Title
                 ColumnText.ShowTextAligned(cb, Element.ALIGN_CENTER,
                     new Phrase("JBVNL – Electricity Bill Receipt", FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 14)),
                     pageSize.Width / 2, pageSize.GetTop(document.TopMargin) + 25, 0);
 
-                // Footer - Page number
+          
                 ColumnText.ShowTextAligned(cb, Element.ALIGN_CENTER,
                     new Phrase("Page " + writer.PageNumber, FontFactory.GetFont(FontFactory.HELVETICA, 10)),
                     pageSize.Width / 2, pageSize.GetBottom(document.BottomMargin) - 10, 0);
@@ -77,7 +76,7 @@ namespace ElectricityBillProject
 
             DataRow r = dt.Rows[0];
 
-            // Prepare PDF response
+            //  PDF 
             using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
             {
                 Document doc = new Document(PageSize.A4, 50, 50, 80, 50);
@@ -102,20 +101,20 @@ namespace ElectricityBillProject
                     doc.Add(new Paragraph("\n"));
                 }
 
-                // Section: Customer Details
+          
                 doc.Add(new Paragraph("Customer Details", sectionFont));
                 doc.Add(new Paragraph(" "));
                 AddRow("Consumer Number", r["consumer_number"].ToString());
                 AddRow("Consumer Name", r["consumer_name"].ToString());
 
-                // Section: Billing Info
+                
                 doc.Add(new Paragraph("Electricity Usage", sectionFont));
                 doc.Add(new Paragraph(" "));
                 AddRow("Units Consumed", r["units_consumed"].ToString() + " kWh");
                 AddRow("Bill Amount", "Rs. " + r["bill_amount"]);
                 AddRow("Bill Date", Convert.ToDateTime(r["bill_date"]).ToString("yyyy-MM-dd"));
 
-                // Section: Payment Info
+             
                 doc.Add(new Paragraph("Payment Details", sectionFont));
                 doc.Add(new Paragraph(" "));
                 AddRow("Payment ID", r["payment_id"].ToString());
@@ -124,7 +123,6 @@ namespace ElectricityBillProject
                 AddRow("Payment Method", r["method"].ToString());
                 AddRow("Payment Date", Convert.ToDateTime(r["payment_date"]).ToString("yyyy-MM-dd HH:mm"));
 
-                // Thank you message
                 doc.Add(new Paragraph("Thank you for your payment!", FontFactory.GetFont(FontFactory.HELVETICA_BOLD, 13, BaseColor.DARK_GRAY)) { SpacingBefore = 20 });
 
                 doc.Close();

@@ -11,17 +11,8 @@ namespace ElectricityBillProject
 {
 
 
-    public partial class SiteMaster
+    public partial class ConsumerLookup
     {
-
-        /// <summary>
-        /// TitleContent control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder TitleContent;
 
         /// <summary>
         /// form1 control.
@@ -33,21 +24,21 @@ namespace ElectricityBillProject
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// SidebarLinks control.
+        /// txtConsumerNumber control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder SidebarLinks;
+        protected global::System.Web.UI.WebControls.TextBox txtConsumerNumber;
 
         /// <summary>
-        /// MainContent control.
+        /// btnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Button btnSubmit;
     }
 }

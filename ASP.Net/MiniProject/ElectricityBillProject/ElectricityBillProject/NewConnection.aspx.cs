@@ -10,7 +10,7 @@ namespace ElectricityBillProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Only process when form is submitted
+           
             if (IsPostBack && Request.Form["txtName"] != null)
             {
                 SubmitApplication();
@@ -23,7 +23,7 @@ namespace ElectricityBillProject
             {
                 string idPath = "", photoPath = "";
 
-                // Handle file uploads manually
+             
                 var idFile = Request.Files["fuId"];
                 if (idFile != null && idFile.ContentLength > 0)
                 {
@@ -44,7 +44,7 @@ namespace ElectricityBillProject
                 if (Session["user_id"] != null)
                     userId = Convert.ToInt32(Session["user_id"]);
 
-                // Read values from HTML inputs
+               
                 string name = Request.Form["txtName"];
                 string phone = Request.Form["txtPhone"];
                 string email = Request.Form["txtEmail"];
@@ -82,7 +82,7 @@ namespace ElectricityBillProject
                     con.Close();
                 }
 
-                // Return a message directly in HTML
+               
                 Response.Write("<div class='alert alert-success mt-3'>✅ Application submitted successfully. Please pay Rs. 8000 on the Payment page.</div>");
             }
             catch (Exception ex)

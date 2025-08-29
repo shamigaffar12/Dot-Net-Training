@@ -24,6 +24,15 @@ namespace ElectricityBillProject
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// lnkViewConnections control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lnkViewConnections;
+
+        /// <summary>
         /// lblUsers control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace ElectricityBillProject
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblConcerns;
+
+        /// <summary>
+        /// GridViewConnections control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridViewConnections;
 
         /// <summary>
         /// lblMsg control.

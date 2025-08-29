@@ -20,7 +20,7 @@ namespace ElectricityBillProject
                     string query = "SELECT user_id, name FROM Users WHERE email = @e AND password = @p";
                     SqlCommand cmd = new SqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@e", email);
-                    cmd.Parameters.AddWithValue("@p", password);  // Note: use hashed passwords in production!
+                    cmd.Parameters.AddWithValue("@p", password);  
 
                     con.Open();
 
@@ -45,7 +45,7 @@ namespace ElectricityBillProject
             catch (Exception ex)
             {
                 lblMsg.CssClass = "text-danger";
-                lblMsg.Text = " Error: " + ex.Message;
+                lblMsg.Text = " Error " ;
             }
         }
     }
